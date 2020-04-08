@@ -1,9 +1,10 @@
-version: '2.1'
+version: '2.3'
 
 services:
   netdata:
     image: netdata/netdata
-    hostname: ${HOSTNAME}.local # set to fqdn of host
+    container_name: netdata
+    hostname: localhost # set to fqdn of host
     ports:
       - 9090:19999
     cap_add:
